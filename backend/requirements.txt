@@ -1,0 +1,16 @@
+fastapi==0.115.*
+uvicorn==0.34.*
+supabase==2.9.0
+openai==1.68.2
+anthropic==0.18.*
+google-generativeai==0.8.*
+pydantic==2.6.*
+pydantic-settings==2.1.*
+python-multipart==0.0.9
+numpy==1.26.*
+email-validator==2.1.*
+qdrant-client==1.5.*
+httpx==0.26.*
+slowapi==0.1.9
+stripe==7.9.*
+resend==0.7.*

@@ -1,0 +1,51 @@
+/**
+ * 🎯 EXAMPLE: Protected Page Template
+ * 
+ * Copy this file to create new protected pages!
+ * Rename to: page.tsx in your feature folder
+ * 
+ * The (authenticated) wrapper handles:
+ * - Checking if user is logged in
+ * - Redirecting to login if not
+ * - Loading states
+ * 
+ * You just build your feature!
+ */
+
+'use client';
+
+import { useAuth } from '@/components/providers/auth-provider';
+
+export default function ExampleProtectedPage() {
+  const { user } = useAuth();
+
+  return (
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <h1 className="text-3xl font-bold mb-6">
+        Welcome, {user?.email}!
+      </h1>
+      
+      <div className="bg-white rounded-lg shadow p-6">
+        <h2 className="text-xl font-semibold mb-4">
+          This is a protected page
+        </h2>
+        
+        <p className="text-gray-600 mb-4">
+          Only authenticated users can see this content.
+          The authentication check is handled automatically by the (authenticated) layout.
+        </p>
+        
+        <div className="mt-6 p-4 bg-blue-50 rounded">
+          <p className="text-sm text-blue-800">
+            💡 To create your own protected pages:
+          </p>
+          <ol className="list-decimal list-inside mt-2 text-sm text-blue-700">
+            <li>Create a folder in app/(authenticated)/your-feature/</li>
+            <li>Add a page.tsx file</li>
+            <li>Build your feature - auth is already handled!</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  );
+}
